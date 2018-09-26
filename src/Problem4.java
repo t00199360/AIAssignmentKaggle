@@ -22,12 +22,25 @@ public class Problem4 {
 
     private static void nameLength(String fullName, String initialAsString)
     {
-        printInfo(initialAsString,fullName);
+        int nameLength=fullName.length();
+        printInfo(initialAsString,fullName,nameLength);
+
     }
 
-    private static void printInfo(String initialAsString, String fullName)
+
+
+    private static void printInfo(String initialAsString, String fullName, int nameLength)
     {
+        int index;
+        index = fullName.indexOf(' ');
+        String firstName = fullName.substring(1, index);
+
+        int index2 = fullName.lastIndexOf(" ");
+        String lastName=fullName.substring(index2);
         JOptionPane.showMessageDialog(null, "Your information is as follows: "
-        + "\nThe initials of your first name is: " + initialAsString + "\nYour full name is: " + fullName);
+        + "\nThe initials of your first name is: " + initialAsString + "\nYour full name is: " + fullName
+        + "\nYour name is this many digits long: (This includes spaces) " + nameLength + "\nYour name is all caps is: " +
+                fullName.toUpperCase() + "\nYour second name is: " + lastName);
+
     }
 }

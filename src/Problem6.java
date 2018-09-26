@@ -9,13 +9,13 @@ public class Problem6
             cube();
             inputs++;
 
-            if (inputs=16)
+            if (inputs==16)
             {
                 i++;
             }
 
         }
-        System.out.print()
+        System.out.print("65435");
     }
 
     private static void cube()

@@ -26,6 +26,9 @@ public class Problem9
     private static void printWeights(double[] userInputs)
     {
         int weightUnder250=0;
+        int numOver400=0;
+
+
         for(int i=0;i<10;i++)
         {
            // weight += userInputs[i] + ", ";
@@ -33,9 +36,19 @@ public class Problem9
             {
                 weightUnder250++;
             }
+            if (userInputs[i]>400)
+            {
+                numOver400++;
+            }
+
+
+
             System.out.printf("%.2f, ",userInputs[i]);
         }
+        int percentage=numOver400;
+        int percentageOver400=percentage;
+
         System.out.println("\nNumber under 250KG: " + weightUnder250);
-        System.out.println("\nPercentage over 400KG: ");
+        System.out.println("\nPercentage over 400KG: " + percentageOver400 +"0%");
     }
 }
